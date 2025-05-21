@@ -45,6 +45,12 @@ class Settings(BaseSettings):
         description="Anthropic API key for accessing Anthropic services",
     )
 
+    # Local model settings
+    LM_STUDIO_API_BASE: str = Field(
+        default="http://127.0.0.1:1235",
+        description="Base URL for Local Model Studio API",
+    )
+
     # Models
     MODEL_GEMINI_2_0_FLASH: str = Field(
         default="gemini-2.0-flash",
@@ -57,6 +63,14 @@ class Settings(BaseSettings):
     MODEL_CLAUDE_SONNET: str = Field(
         default="anthropic/claude-3-sonnet-20240229",
         description="Default Anthropic model to use",
+    )
+    MODEL_GEMMA_3_27B: str = Field(
+        default="lm_studio/gemma-3-27b-it-qat",
+        description="Default Gemma model to use",
+    )
+    MODEL_GEMMA_3_4B: str = Field(
+        default="lm_studio/gemma-3-4b-it-qat",
+        description="Default Gemma model to use",
     )
 
     # Other default configuration

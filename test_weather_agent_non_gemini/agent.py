@@ -17,10 +17,12 @@ settings = get_settings()
 MODEL_GEMINI_2_0_FLASH = settings.MODEL_GEMINI_2_0_FLASH
 MODEL_GPT_4O = settings.MODEL_GPT_4O
 MODEL_CLAUDE_SONNET = settings.MODEL_CLAUDE_SONNET
+MODEL_GEMMA_3_27B = settings.MODEL_GEMMA_3_27B
+MODEL_GEMMA_3_4B = settings.MODEL_GEMMA_3_4B
 
 root_agent = Agent(
     name="weather_agent_v1",
-    model=MODEL_GEMINI_2_0_FLASH,
+    model=LiteLlm(model=MODEL_GEMMA_3_4B),
     description="Provides weather information for specific cities.",
     instruction="You are a helpful weather assistant. "
     "When the user asks for the weather in a specific city, "
