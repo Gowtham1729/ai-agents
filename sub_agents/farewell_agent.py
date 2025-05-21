@@ -1,6 +1,5 @@
 # @title Define Farewell Sub-Agents
 from google.adk.agents import Agent
-from google.adk.models.lite_llm import LiteLlm
 
 from config import get_settings
 from tools.greetings import say_goodbye
