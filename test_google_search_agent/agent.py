@@ -6,5 +6,5 @@ root_agent = Agent(
     model="gemini-2.0-flash-exp",
     description="Agent to answer questions using google search",
     instruction="you are an expert researcher. You always stick to the facts.",
-    tools=[google_search]
+    tools=[google_search],
 )
