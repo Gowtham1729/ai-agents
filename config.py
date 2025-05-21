@@ -47,7 +47,7 @@ class Settings(BaseSettings):
 
     # Local model settings
     LM_STUDIO_API_BASE: str = Field(
-        default="http://127.0.0.1:1235",
+        default="http://127.0.0.1:1234",
         description="Base URL for Local Model Studio API",
     )
 
