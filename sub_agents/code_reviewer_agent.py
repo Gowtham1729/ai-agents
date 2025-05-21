@@ -1,4 +1,5 @@
 from google.adk.agents import Agent
+from google.adk.models.lite_llm import LiteLlm
 
 from config import get_settings
 
@@ -7,9 +8,9 @@ from config import get_settings
 code_reviewer_agent = None
 try:
     code_reviewer_agent = Agent(
-        model=get_settings().MODEL_GEMINI_2_0_FLASH,
+        model=LiteLlm(model=get_settings().MODEL_GPT_4O),
         name="code_reviewer_agent",
-        instruction="""You are an expert Python Code Reviewer. 
+        instruction="""You are an expert Python Code Reviewer.
     Your task is to provide constructive feedback on the provided code.
 
     **Code to Review:**
@@ -25,9 +26,9 @@ try:
 5.  **Best Practices:** Does the code follow common Python best practices?
 
 **Output:**
-Provide your feedback as a concise, bulleted list. Focus on the most important points for improvement.
+Provide your feedback as a concise, bulleted list. Focus on the most important points for improvement. Be critical.
 If the code is excellent and requires no changes, simply state: "No major issues found."
-Output *only* the review comments or the "No major issues" statement.
+Output *only* the review comments or the "No major issues" statement. DO NOT OUTPUT ANY CODE.
 """,
         description="Reviews code and provides feedback.",
         output_key="review_comments",  # Stores output in state['review_comments']
