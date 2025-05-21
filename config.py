@@ -72,6 +72,10 @@ class Settings(BaseSettings):
         default="lm_studio/gemma-3-4b-it-qat",
         description="Default Gemma model to use",
     )
+    MODEL_QWEN3_0_6B: str = Field(
+        default="lm_studio/qwen3-0.6b",
+        description="Default Qwen3 model to use",
+    )
 
     # Other default configuration
     DEFAULT_TEMPERATURE: float = Field(
