@@ -104,13 +104,13 @@ Agent behavior, especially the Large Language Models (LLMs) they use, is primari
 ### Key Configuration Aspects:
 
 1.  **Model Selection:**
-    *   The `Settings` class in `config.py` defines model identifiers (e.g., `MODEL_GEMINI_PRO_1_5_FLASH`, `MODEL_GPT_4O`, `MODEL_CLAUDE_SONNET`, local models like `MODEL_GEMMA_7B_IT`).
+    *   The `Settings` class in `config.py` defines model identifiers (e.g., `MODEL_GEMINI_2_0_FLASH`, `MODEL_GPT_4O`, `MODEL_CLAUDE_SONNET`, local models like `MODEL_GEMMA_3_27B`).
     *   Agents are instantiated with a specific model, e.g., in `sub_agents/code_writer_agent.py`:
         ```python
         from config import get_settings
         # ...
         code_writer_agent = Agent(
-            model=get_settings().MODEL_GEMINI_PRO_1_5_FLASH, 
+            model=get_settings().MODEL_GEMINI_2_0_FLASH, 
             # ...
         )
         ```
