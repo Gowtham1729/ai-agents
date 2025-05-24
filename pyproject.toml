@@ -5,6 +5,6 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "google-adk>=1.0.0",
+    "google-adk[vertexai]>=1.0.0",
     "litellm>=1.70.0",
 ]
